@@ -1,3 +1,56 @@
 theme: jekyll-theme-hacker
 title: Saamiyah's homepage
 description: Bookmark this to keep an eye on my project updates!
+author: Saamiyah Ali
+url: "https://saamiyahali.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+remote_theme: pages-themes/cayman@v0.2.0
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalink structure (WordPress-style)
+permalink: /:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - migrate.sh
+  - wordpress_to_github.py
+  - requirements.txt
+  - fix_dates.py
+  - rename_posts.sh
+  - post_dates.csv
+
+# Include
+include:
+  - _posts
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Saamiyah Ali"
+
+# Social links
+github_username: saamiyahali
+
+# Show excerpts on homepage
+show_excerpts: true
+
+# Cayman theme options
+show_downloads: false
