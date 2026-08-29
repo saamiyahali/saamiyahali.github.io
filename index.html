@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saamiyah Ali — UCLA Coursework & Projects</title>
+<meta name="description" content="Selected computer science and engineering coursework and projects completed at UCLA by Saamiyah Ali.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a1a; --muted:#5a5a5a; --card:#f6f7f9;
+    --border:#e2e4e8; --accent:#2b6cb0; --tag:#eaeef3; --tag-fg:#33415c;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0f1115; --fg:#e8e8e8; --muted:#9aa0aa; --card:#171a21;
+      --border:#262b34; --accent:#6ea8fe; --tag:#20252e; --tag-fg:#b9c2d0;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:860px;margin:0 auto;padding:48px 20px 80px}
+  header h1{font-size:1.9rem;margin:0 0 .3rem}
+  header p.lead{color:var(--muted);margin:.2rem 0 1.2rem;font-size:1.05rem}
+  .links a{color:var(--accent);text-decoration:none;margin-right:1rem;font-size:.95rem}
+  .links a:hover{text-decoration:underline}
+  .note{background:var(--card);border:1px solid var(--border);border-radius:10px;
+    padding:12px 16px;color:var(--muted);font-size:.9rem;margin:28px 0}
+  h2.q{font-size:1.15rem;margin:40px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;margin:14px 0}
+  .card h3{margin:0 0 .25rem;font-size:1.05rem}
+  .card .course{color:var(--muted);font-size:.85rem;margin:0 0 .6rem}
+  .card p{margin:.5rem 0}
+  .card .repo{font-size:.9rem}
+  .card .repo a{color:var(--accent);text-decoration:none}
+  .card .repo a:hover{text-decoration:underline}
+  .tags{margin-top:.6rem}
+  .tags span{display:inline-block;background:var(--tag);color:var(--tag-fg);
+    border-radius:20px;padding:2px 10px;font-size:.78rem;margin:3px 6px 0 0}
+  footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Saamiyah Ali</h1>
+  <p class="lead">Computer Science &amp; Engineering coursework and projects at UCLA.</p>
+  <div class="links">
+    <a href="https://github.com/saamiyahali">GitHub</a>
+    <a href="https://github.com/saamiyahali?tab=repositories">All repositories</a>
+  </div>
+</header>
+
+<div class="note">
+  Course repositories are currently <strong>private</strong> and opened to recruiters on request.
+  Each summary below describes the work and its architecture; full write-ups live in each repo's README.
+</div>
+
+<h2 class="q">Winter 2026</h2>
+
+<div class="card">
+  <h3>Bruin Escape — first-person WebGL escape-room game</h3>
+  <p class="course">CS 174A · Introduction to Computer Graphics · team final project</p>
+  <p>Real-time 3D escape-room game built on <code>tiny-graphics.js</code>: custom shaders,
+     Phong lighting, textured environments, collision, and an interactive puzzle flow.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/BruinEscape">github.com/saamiyahali/BruinEscape</a></p>
+  <div class="tags"><span>WebGL</span><span>JavaScript</span><span>Real-time rendering</span><span>Game</span></div>
+</div>
+
+<div class="card">
+  <h3>Computer Graphics assignments 1–4</h3>
+  <p class="course">CS 174A · Introduction to Computer Graphics</p>
+  <p>Progression through affine transformation hierarchies, procedural animation,
+     Phong shading with multiple lights, and texture mapping — each a
+     <code>Scene</code> subclass driving a WebGL vertex/fragment pipeline.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/cs174a-ucla-winter-2026">cs174a-ucla-winter-2026</a></p>
+  <div class="tags"><span>WebGL</span><span>Linear algebra</span><span>Shaders</span></div>
+</div>
+
+<div class="card">
+  <h3>Software construction — C, Python, Git internals</h3>
+  <p class="course">CS 35L · Software Construction</p>
+  <p><code>randall.c</code>, a coreutils-style random-byte generator (hardware RDRAND with
+     <code>/dev/urandom</code> fallback, buffered output); <code>topo_order_commits.py</code>,
+     a from-scratch <code>git log --topo-order</code> that parses the <code>.git</code> object
+     store and topologically sorts the commit DAG; plus shell and Emacs Lisp labs.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/cs35l-ucla-winter-2026">cs35l-ucla-winter-2026</a></p>
+  <div class="tags"><span>C</span><span>Python</span><span>Unix</span><span>Git</span></div>
+</div>
+
+<h2 class="q">Spring 2026</h2>
+
+<div class="card">
+  <h3>Concurrent hash table</h3>
+  <p class="course">CS 111 · Operating Systems Principles</p>
+  <p>Three implementations of a chained hash table — unsynchronized baseline, a single
+     global mutex (correct, no speedup), and per-bucket mutexes (correct and scaling
+     near-linearly with cores) — validated by a multithreaded add/lookup benchmark.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/cs111-ucla-spring-2026">cs111-ucla-spring-2026</a></p>
+  <div class="tags"><span>C</span><span>pthreads</span><span>Concurrency</span></div>
+</div>
+
+<div class="card">
+  <h3>Autonomous line-following race car</h3>
+  <p class="course">ECE 3 · Introduction to Electrical Engineering · final project</p>
+  <p>Firmware for a TI-RSLK MAX robot (MSP432 Cortex-M4F): an 8-channel IR reflectance
+     array feeds a calibrated weighted-sum line estimate into PD steering that drives
+     differential motor PWM, with a crossbar-triggered state machine for the out-and-back run.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/ece3-ucla-spring-2026">ece3-ucla-spring-2026</a></p>
+  <div class="tags"><span>Embedded C++</span><span>MSP432</span><span>Control (PID)</span><span>Robotics</span></div>
+</div>
+
+<h2 class="q">Summer 2026</h2>
+
+<div class="card">
+  <h3>Ant-colony foraging simulation + MATLAB methods</h3>
+  <p class="course">C&amp;EE M20 · Introduction to Computer Programming</p>
+  <p>Agent-based ant-colony optimization: stochastic heading updates biased by a
+     depositing/evaporating pheromone field, obstacle-aware movement validation, and
+     food/colony pickup logic, rendered to video. Plus MATLAB homework on numerical
+     integration, regression, and FFT signal processing.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/ceem20-ucla-summer-2026">ceem20-ucla-summer-2026</a></p>
+  <div class="tags"><span>MATLAB</span><span>Simulation</span><span>Numerical methods</span></div>
+</div>
+
+<div class="card">
+  <h3>Probability &amp; statistics group project</h3>
+  <p class="course">CEE 110 · Probability and Statistics for Engineers</p>
+  <p>Team study applying descriptive statistics, distribution fitting, confidence
+     intervals, hypothesis testing, and regression to a real dataset.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/cee110-ucla-summer-2026">cee110-ucla-summer-2026</a></p>
+  <div class="tags"><span>Statistics</span><span>Data analysis</span></div>
+</div>
+
+<h2 class="q">Fall 2025</h2>
+
+<div class="card">
+  <h3>Machine-level programming</h3>
+  <p class="course">CS 33 · Introduction to Computer Organization</p>
+  <p>Data Lab — branch-free integer and IEEE-754 float operations built from a
+     restricted bitwise operator set — plus annotated x86-64 disassembly from the
+     reverse-engineering lab.</p>
+  <p class="repo">Repo: <a href="https://github.com/saamiyahali/cs33-ucla-fall-2025">cs33-ucla-fall-2025</a></p>
+  <div class="tags"><span>C</span><span>x86-64</span><span>Bit manipulation</span></div>
+</div>
+
+<div class="card">
+  <h3>Digital logic &amp; sequential circuit design</h3>
+  <p class="course">CS M51A · Logic Design of Digital Systems</p>
+  <p>Combinational and sequential logic, register-transfer design, and finite state
+     machines. Coursework was paper-based; no code repository.</p>
+  <div class="tags"><span>Digital logic</span><span>FSM</span><span>RTL</span></div>
+</div>
+
+<footer>
+  Built as a coursework portfolio · <a href="https://github.com/saamiyahali" style="color:var(--accent)">github.com/saamiyahali</a>
+</footer>
+</div>
+</body>
+</html>
